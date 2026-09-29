@@ -1,0 +1,10 @@
+
+{
+  "name": "pujonoak",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-29",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  }
+}
