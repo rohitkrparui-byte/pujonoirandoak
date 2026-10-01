@@ -322,7 +322,7 @@ async function gameApi(env, request) {
         {
           id: 1,
           session_name: String(
-            b.session_name || "Pujo Secret Society"
+            b.session_name || "Pujo After Dark"
           ).slice(0, 100),
           status: "waiting",
           round_number: 0,
@@ -505,7 +505,8 @@ export default {
       });
     }
 
-    if (path === "/.netlify/functions/validate-invite" ||
+    if (path === "/api/validate-invite" ||
+        path === "/.netlify/functions/validate-invite" ||
         path === "/netlify/functions/validate-invite") {
       if (request.method !== "POST") {
         return json({ valid: false, message: "POST required." }, 405);
@@ -524,7 +525,8 @@ export default {
 
     if (path === "/.netlify/functions/game-api" ||
         path === "/netlify/functions/game-api" ||
-        path === "/api/game") {
+        path === "/api/game" ||
+        path === "/api/game-api") {
       if (request.method !== "POST") {
         return json({ error: "POST required." }, 405);
       }
